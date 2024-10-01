@@ -10,24 +10,48 @@ $(document).ready(function() {
 
 // call Flask API endpoint
 function makePredictions() {
-    var sex_flag = $("#gender").val();
+    console.log('logic function called')
     var BMI = $("#BMI").val();
-    var SmokerStatus = $("#SmokerStatus").val();
-    var GeneralHealth = $("#GeneralHealth").val();
+    var Smoking = $("#Smoking").val();
+    var AlcoholDrinking = $("#AlcoholDrinking").val();
+    var Stroke = $("#Stroke").val();
+    var PhysicalHealth = $("#PhysicalHealth").val();
+    var MentalHealth = $("#MentalHealth").val();
+    var DiffWalking = $("#DiffWalking").val();
+    var Sex = $("#Sex").val();
     var AgeCategory = $("#AgeCategory").val();
-    // var race
-   
+    var Race = $("#Race").val();
+    var Diabetic = $("#Diabetic").val();
+    var PhysicalActivity = $("#PhysicalActivity").val();
+    var GenHealth = $("#GenHealth").val();
+    var SleepTime = $("#SleepTime").val();
+    var Asthma = $("#Asthma").val();
+    var KidneyDisease = $("#KidneyDisease").val();
+    var SkinCancer = $("#SkinCancer").val();
+
+    console.log(SkinCancer)
+
     // check if inputs are valid
 
     // create the payload
     var payload = {
-        "sex_flag": sex_flag,
-        "BMI": BMI,
-        "SmokerStatus": SmokerStatus,
-        "GeneralHealth": GeneralHealth,
-        "AgeCategory": AgeCategory,
-        // "Race"
-        
+        'BMI' : BMI,
+        'Smoking' : Smoking,
+        'AlcoholDrinking' : AlcoholDrinking,
+        'Stroke' : Stroke,
+        'PhysicalHealth' : PhysicalHealth,
+        'MentalHealth' : MentalHealth,
+        'DiffWalking' : DiffWalking,
+        'Sex' : Sex,
+        'AgeCategory' : AgeCategory,
+        'Race' : Race,
+        'Diabetic' : Diabetic,
+        'PhysicalActivity' : PhysicalActivity,
+        'GenHealth' : GenHealth,
+        'SleepTime' : SleepTime,
+        'Asthma' : Asthma,
+        'KidneyDisease' : KidneyDisease,
+        'SkinCancer' : SkinCancer
     }
 
     // Perform a POST request to the query URL
