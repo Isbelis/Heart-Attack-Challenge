@@ -11,7 +11,7 @@ modelHelper = ModelHelper()
 @app.route("/")
 def home():
     # Return template and data
-    return render_template("index.html")
+    return render_template("report.html")
 
 @app.route("/about_us")
 def about_us():
@@ -21,7 +21,13 @@ def about_us():
 @app.route("/tableau")
 def tableau():
     # Return template and data
-    return render_template("tableau2.html")
+    return render_template("tableau.html")
+
+
+@app.route("/works_cited")
+def works_cited():
+    # Return template and data
+    return render_template("works_cited.html")
 
 @app.route("/makePredictions", methods=["POST"])
 def make_predictions():

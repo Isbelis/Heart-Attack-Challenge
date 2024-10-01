@@ -8,11 +8,10 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 modelHelper = ModelHelper()
 
 # Route to render index.html template using data from Mongo
-@app.route("/report")
+@app.route("/")
 def home():
     # Return template and data
     return render_template("report.html")
-
 
 @app.route("/about_us")
 def about_us():
@@ -33,18 +32,30 @@ def works_cited():
 @app.route("/makePredictions", methods=["POST"])
 def make_predictions():
     content = request.json["data"]
-    print(content)
-
+    print('app route called')
     # parse
-    sex_flag = content["sex_flag"]
-    BMI = float(content["BMI"])
-    SmokerStatus = content["SmokerStatus"]
-    GeneralHealth = content["GeneralHealth"]
-    AgeCategory= content["AgeCategory"]
+    BMI = int(content['BMI'])
+    Smoking = content['Smoking']
+    AlcoholDrinking = content['AlcoholDrinking']
+    Stroke = content['Stroke']
+    PhysicalHealth = int(content['PhysicalHealth'])
+    MentalHealth = int(content['MentalHealth'])
+    DiffWalking = content['DiffWalking']
+    Sex = content['Sex']
+    AgeCategory = content['AgeCategory']
+    Race = content['Race']
+    Diabetic = content['Diabetic']
+    PhysicalActivity = content['PhysicalActivity']
+    GenHealth = content['GenHealth']
+    SleepTime = int(content['SleepTime'])
+    Asthma = content['Asthma']
+    KidneyDisease = content['KidneyDisease']
+    SkinCancer = content['SkinCancer']
 
-
-    preds = modelHelper.makePredictions('Sex', 'BMI', 'SmokerStatus', 'GeneralHealth', 'AgeCategory')
-    return(jsonify({"ok": True, "prediction": str(preds)}))
+    prediction = modelHelper.makePredictions(BMI,Smoking,AlcoholDrinking,Stroke,PhysicalHealth,MentalHealth,DiffWalking,Sex,
+                AgeCategory,Race,Diabetic,PhysicalActivity,GenHealth,SleepTime,Asthma,KidneyDisease,SkinCancer)
+    
+    return(prediction)
 
 
 #############################################################
