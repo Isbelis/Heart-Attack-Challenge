@@ -41,7 +41,7 @@ def make_predictions():
     print('app route called')
     
     # Parse incoming JSON
-    BMI = int(content['BMI'])
+    BMI = float(content['BMI'])
     Smoking = content['Smoking']
     AlcoholDrinking = content['AlcoholDrinking']
     Stroke = content['Stroke']
@@ -60,10 +60,8 @@ def make_predictions():
     SkinCancer = content['SkinCancer']
 
     # Make prediction using the ModelHelper
-    prediction = modelHelper.makePredictions(
-        BMI, Smoking, AlcoholDrinking, Stroke, PhysicalHealth, MentalHealth, DiffWalking, Sex,
-        AgeCategory, Race, Diabetic, PhysicalActivity, GenHealth, SleepTime, Asthma, KidneyDisease, SkinCancer
-    )
+    prediction = modelHelper.makePredictions(BMI, Smoking, AlcoholDrinking, Stroke, PhysicalHealth, MentalHealth, DiffWalking, Sex,
+        AgeCategory, Race, Diabetic, PhysicalActivity, GenHealth, SleepTime, Asthma, KidneyDisease, SkinCancer)
 
     # Return the prediction as JSON response
     return jsonify({"prediction": prediction})

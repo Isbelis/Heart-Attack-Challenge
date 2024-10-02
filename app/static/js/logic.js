@@ -49,6 +49,8 @@ function makePredictions() {
         'SkinCancer' : SkinCancer
     };
 
+    console.log(payload)
+
     // Perform a POST request to the query URL
     $.ajax({
         type: "POST",

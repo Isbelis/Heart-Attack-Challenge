@@ -5,7 +5,7 @@ class ModelHelper():
     def __init__(self):
         pass
 
-    def prediction(BMI,Smoking,AlcoholDrinking,Stroke,PhysicalHealth,MentalHealth,DiffWalking,Sex,AgeCategory,
+    def makePredictions(self, BMI,Smoking,AlcoholDrinking,Stroke,PhysicalHealth,MentalHealth,DiffWalking,Sex,AgeCategory,
                Race,Diabetic,PhysicalActivity,GenHealth,SleepTime,Asthma,KidneyDisease,SkinCancer):
     
         model = pickle.load(open("heart_model.h5", 'rb'))
