@@ -29,11 +29,18 @@ def works_cited():
     # Return template and data
     return render_template("works_cited.html")
 
-@app.route("/makePredictions", methods=["POST"])
+@app.route("/ml_live_form")
+def ml_live_form():
+    # Return template and data
+    return render_template("ml_live_form.html")
+
+
+@app.route("/makePrediction", methods=["POST"])
 def make_predictions():
     content = request.json["data"]
     print('app route called')
-    # parse
+    
+    # Parse incoming JSON
     BMI = int(content['BMI'])
     Smoking = content['Smoking']
     AlcoholDrinking = content['AlcoholDrinking']
@@ -52,13 +59,16 @@ def make_predictions():
     KidneyDisease = content['KidneyDisease']
     SkinCancer = content['SkinCancer']
 
-    prediction = modelHelper.makePredictions(BMI,Smoking,AlcoholDrinking,Stroke,PhysicalHealth,MentalHealth,DiffWalking,Sex,
-                AgeCategory,Race,Diabetic,PhysicalActivity,GenHealth,SleepTime,Asthma,KidneyDisease,SkinCancer)
-    
-    return(prediction)
+    # Make prediction using the ModelHelper
+    prediction = modelHelper.makePredictions(
+        BMI, Smoking, AlcoholDrinking, Stroke, PhysicalHealth, MentalHealth, DiffWalking, Sex,
+        AgeCategory, Race, Diabetic, PhysicalActivity, GenHealth, SleepTime, Asthma, KidneyDisease, SkinCancer
+    )
+
+    # Return the prediction as JSON response
+    return jsonify({"prediction": prediction})
 
 
-#############################################################
 
 @app.after_request
 def add_header(r):
