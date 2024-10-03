@@ -31,6 +31,7 @@ A user-friendly website was created to interact with the model. Users can input 
 
 ### 5. Dashboards 
 This project includes two story dashboards, each displaying descriptive statistics and relationships between variables relevant to heart attack prediction. Both stories contain four dashboards, providing insights into various factors contributing to heart attacks. 
+
 **Dashboard 1**: 
 
 ![dashboard_1jpg](https://github.com/user-attachments/assets/899ce58f-25f2-4fd9-8b4b-d575770e52ed)
@@ -39,43 +40,58 @@ This project includes two story dashboards, each displaying descriptive statisti
 ![Dashboard_2](https://github.com/user-attachments/assets/d55cfcfc-0c36-4b3f-a033-7aa39ef13bb3)
 
 
-## Folder and Files: 
+## Folders:
 
-### EDA Folder (Exploratory Data Analysis):
+### 1. EDA Folder (Exploratory Data Analysis):
 
-#### Resources:
-Contains reference files like geographical data `US_GeoCode.csv, world_country_and_usa_states_latitude_and_longitude_values.csv` and dataset (`heart_2022_no_nans.csv` used for visualizations in the dashboard.
+  **Resources**: Contains reference files like geographical data `US_GeoCode.csv`, `world_country_and_usa_states_latitude_and_longitude_values.csv`, dataset `heart_2022_no_nans.csv`, and images were used for visualizations in the dashboard.
+  
   **Files**:
             **1. heart_attack_2022_cleaning.ipynb**: A Jupyter notebook that handles the cleaning of the `heart_2022_no_nans.csv` dataset.
             **2. heart_attack_2022_location.csv**: The cleaned dataset, saved as a CSV file for further analysis and visualization.
             **3. heart_attack_2022_viz.ipynb**: A notebook focused on visualizing heart disease data using various charts and plots.
-            
-#### ML Folder (Machine Learning):
 
-  **Resources**: Contains the original datasets `heart_2020_cleaned.csv` and `heart_attack_2022_location.csv`.
-  
+### 2. ML Folder (Machine Learning):
   **Files**:
     **- modelHelper.py**: A Python script with helper functions used for building machine learning models.
     **- model_creation.ipynb**: A Jupyter notebook for creating machine learning models based on the cleaned heart disease dataset.
-    **-heart_2020_cleaned.csv**
-  
-  
-**Other Files**:
+    **- heart_2020_cleaned.csv**
+    
+### 3. Resources: 
+Contains the original datasets `heart_2020_cleaned.csv` and `heart_attack_2022_location.csv`.
 
-  **Heart Diseases Analysis.pptx**: The final presentation summarizing the project's analysis, results, and conclusions.
-  **Project 4 Proposal – Group 12.docx.pdf**: A PDF document containing the initial project proposal.
-  **Write-up-project-4-group-12.pdf**: The final report on the project, detailing methods, analysis, and findings.
+## Files:
+
+### Heart Diseases Analysis.pptx: The final presentation summarizing the project's analysis, results, and conclusions.
+### Project 4 Proposal – Group 12.docx.pdf: A PDF document containing the initial project proposal.
+### Write-up-project-4-group-12.pdf: The final report on the project, detailing methods, analysis, and findings.
+
   
-### Web Version:
+## Web Version:
   
 Explore the project online through the following link:
-  
   https://isbelis.pythonanywhere.com/
-
-
 
 This README provides an overview of the project's goals, the machine learning and visualization tools used, and the project structure, offering users insight into heart attack prediction and prevention strategies.
 
+
+## Reference
+
+ https://public.tableau.com/app/search/vizzes/heart%20attack
+ 
+ https://public.tableau.com/app/profile/adrian.tan2691/viz/HeartAttackDistributions/Demographics
+ 
+ https://www.quantizeanalytics.co.uk/tableau-healthcare-dashboard-examples/
+ 
+ https://www.analyticsvidhya.com/blog/2022/06/machine-learning-for-heart-disease-prediction/
+ 
+ https://www.analyticsvidhya.com/blog/2022/02/heart-disease-prediction-using-machine-learning-2/
+ 
+ https://www.analyticsvidhya.com/blog/2022/02/heart-disease-prediction-using-machine-learning/
+ 
+ https://github.com/g-shreekant/Heart-Disease-Prediction-using-Machine-Learning/blob/master/Heart_disease_prediction.ipynb
+ 
+ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10378171/
 
 
 
