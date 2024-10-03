@@ -36,9 +36,12 @@ This project includes two story dashboards, each displaying descriptive statisti
 
 ![dashboard_1jpg](https://github.com/user-attachments/assets/899ce58f-25f2-4fd9-8b4b-d575770e52ed)
 
+**link**: https://public.tableau.com/views/Project_4_Group_12/HeartDiseases?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
+
 **Dashboard 2**
 ![Dashboard_2](https://github.com/user-attachments/assets/d55cfcfc-0c36-4b3f-a033-7aa39ef13bb3)
 
+**link**: https://public.tableau.com/shared/PW9DM2MWS?:display_count=n&:origin=viz_share_link
 
 ## Folders:
 
