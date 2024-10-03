@@ -23,6 +23,10 @@ def tableau():
     # Return template and data
     return render_template("tableau.html")
 
+@app.route("/tableau_2")
+def tableau_2():
+    # Return template and data
+    return render_template("tableau_2.html")
 
 @app.route("/works_cited")
 def works_cited():
