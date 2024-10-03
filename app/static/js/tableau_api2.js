@@ -33,7 +33,7 @@ function initializeViz() {
             activeSheet = workbook.getActiveSheet();
         }
     };
-    viz = new tableau_2.Viz(placeholderDiv, url, options);
+    viz_2 = new tableau_2.Viz(placeholderDiv, url, options);
 }
 
 function exportPDF() {
