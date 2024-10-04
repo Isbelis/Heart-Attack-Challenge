@@ -65,7 +65,7 @@ Contains the original datasets `heart_2020_cleaned.csv` and `heart_attack_2022_l
 
 ## Files:
 
-### Heart Diseases Analysis.pptx: The final presentation summarizing the project's analysis, results, and conclusions.
+### Heart Diseases Analysis.pdf: The final presentation summarizing the project's analysis, results, and conclusions.
 ### Project 4 Proposal – Group 12.docx.pdf: A PDF document containing the initial project proposal.
 ### Write-up-project-4-group-12.pdf: The final report on the project, detailing methods, analysis, and findings.
 
